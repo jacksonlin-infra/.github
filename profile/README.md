@@ -10,6 +10,7 @@ Open-source infrastructure for building with AI: small, focused tools for coding
 |---|---|
 | [Twinline](https://github.com/jacksonlin-infra/twinline) | Bilingual mode for Claude Code: write in your language, let Claude work in English, read both side by side. |
 | [TunBridge](https://github.com/jacksonlin-infra/tunbridge) | System-wide TUN for the HTTP(S)/SOCKS5 proxy you already have: Git, SSH, package managers, AI CLIs and containers all use it, with no per-app settings. Windows, Linux and macOS. |
+| [omarchy-doubao](https://github.com/jacksonlin-infra/omarchy-doubao) | Voice input on Omarchy powered by Doubao (Volcengine) speech recognition: hold F9, speak, release, and punctuated text lands at the cursor. |
 
 ### Twinline
 
@@ -26,6 +27,14 @@ Twinline 是 Claude Code 的“双语模式”插件：用你熟悉的语言输�
 Windows 11 · Ubuntu 24.04/26.04 · Omarchy · macOS 12+ — [Download](https://github.com/jacksonlin-infra/tunbridge/releases/latest) · [Documentation](https://github.com/jacksonlin-infra/tunbridge#readme) · [简体中文](https://github.com/jacksonlin-infra/tunbridge/blob/main/README.zh-CN.md)
 
 TunBridge 在你已有的 HTTP(S)/SOCKS5 代理前加一层系统级 TUN，让 Git、SSH、包管理器、AI CLI、容器和各类原生应用都走这个代理，无需逐个设置。代理、引擎或界面出故障时，流量保持阻断，不会悄悄直连；特权部分是一个很小的系统服务，桌面端只能通过固定的几种强类型命令与它通信。无遥测，GPL-3.0-or-later 开源。支持 Windows 11、Ubuntu、Omarchy 和 macOS 12+。
+
+### omarchy-doubao
+
+[omarchy-doubao](https://github.com/jacksonlin-infra/omarchy-doubao) brings Doubao speech recognition to Omarchy, where the Doubao IME has no Linux build. It plugs Volcengine's Doubao streaming ASR into Voxtype, Omarchy's built-in dictation tool, through a small local bridge, so nothing runs on your GPU or CPU. Hold F9 in any window (browser, terminal, Claude Code or Codex prompt), speak, and release: text with punctuation, normalized numbers and filler words removed is typed at the cursor. One script installs and verifies everything, and the repository includes an AGENTS.md so you can hand the link to a coding agent and let it set things up. Supports both new-console API keys and legacy App ID + Access Token. MIT.
+
+Omarchy (Arch + Hyprland) · Volcengine account — [Install](https://github.com/jacksonlin-infra/omarchy-doubao#手动安装) · [Agent guide](https://github.com/jacksonlin-infra/omarchy-doubao/blob/main/AGENTS.md)
+
+omarchy-doubao 让 Omarchy 用上豆包语音识别（豆包输入法没有 Linux 版）。它通过一个本地小服务，把火山引擎的豆包流式语音识别接到 Omarchy 自带的听写工具 Voxtype 上，本机不跑任何模型。在任意窗口（浏览器、终端、Claude Code / Codex 输入框）按住 F9 说话，松开后带标点、数字规整、去掉口水词的文字直接打到光标处。一条脚本完成安装和自检；仓库附带 AGENTS.md，把链接发给编码 Agent 就能让它代为部署。同时支持新版控制台 API Key 和旧版 App ID + Access Token。MIT 开源。
 
 More tools are on the way.
 
